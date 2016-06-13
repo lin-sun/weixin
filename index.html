@@ -8,6 +8,24 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body ng-controller="indexCtrl">
+  <div id="header">
+    <ul class="logo-lists">
+      <li class="weixin">微信</li>
+      <li class="ss"></li>
+      <li class="add"></li>
+    </ul>
+  </div>
+<div id="main">
+<ng-view class="view"></ng-view>
+</div>
+<div id="footer">
+  <ul class="footer-list">
+    <li class="wx" ng-click="cur='#/weixin'"ng-class="{active:cur==='#/weixin'}"><a href="#/weixin">微信</a></li>
+    <li class="txl"ng-click="cur='#/addressBook'" ng-class="{active:cur==='#/addressBook'}"><a href="#/addressBook">通讯录</a></li>
+    <li class="fx" ng-click="cur='#/discover'" ng-class="{active:cur==='#/discover'}"><a href="#/discover">发现</a></li>
+    <li class="wo" ng-click="cur='#/me'" ng-class="{active:cur==='#/me'}"><a href="#/me">我</a></li>
+  </ul>
+</div>
   <script  src="js/jquery-2.2.1.js"></script>
   <script  src="js/angular.js"></script>
   <script  src="js/angular-animate.js"></script>
